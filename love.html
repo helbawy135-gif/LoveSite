@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Habiba -My souL ❤️</title>
+
+<style>
+body{<div class="stars"></div>
+margin:0;
+background:#000;
+color:white;
+font-family:Arial,sans-serif;
+text-align:center;
+overflow-x:hidden;
+}
+
+.stars{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:-1;
+background:
+radial-gradient(2px 2px at 20% 30%,white,transparent),
+radial-gradient(2px 2px at 80% 20%,white,transparent),
+radial-gradient(2px 2px at 40% 80%,white,transparent),
+radial-gradient(2px 2px at 70% 70%,white,transparent),
+radial-gradient(2px 2px at 15% 60%,white,transparent),
+radial-gradient(2px 2px at 90% 50%,white,transparent);
+animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+from{opacity:.3;}
+to{opacity:1;}
+}
+
+h1{
+padding:20px;
+color:#ff4d6d;
+}
+
+p{
+font-size:22px;
+padding:15px;
+}
+
+img{transition:0.8s;
+width:90%;
+max-width:400px;
+margin:20px auto;
+display:block;
+border-radius:20px;
+box-shadow:0 0 20px #ff4d6d;
+}
+</style>
+
+</head>
+<body>
+<audio autoplay loop controls>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+<h1>❤️ Habiba ❤️</h1>
+<h2 id="counter"></h2>
+<h3 id="loveText" style="color:#ffd700;"></h3>
+
+<script>
+const texts = [
+"❤️ كل يوم بحبك أكتر",
+"🥹 إنتي أحلى حاجة حصلتلي",
+"🤍 وجودك هو راحتي",
+"💍 ربنا يخليكي ليا",
+"❤️ بحبك يا أم روفان"
+];
+
+let i = 0;
+
+document.getElementById("loveText").innerHTML = texts[0];
+
+setInterval(function(){
+
+i++;
+
+if(i >= texts.length){
+i = 0;
+}
+
+document.getElementById("loveText").innerHTML = texts[i];
+
+},4000);
+</script>
+<script>
+const start = new Date("2024-11-20");
+
+function updateCounter() {
+    const now = new Date();
+    const diff = now - start;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+    document.getElementById("counter").innerHTML =
+    "❤️ مع بعض بقالنا ❤️<br>" +
+    days + " يوم 💖 " +
+    hours + " ساعة ⏰ " +
+    minutes + " دقيقة";
+}
+
+updateCounter();
+setInterval(updateCounter,60000);
+</script>
+<p>
+الى بنتي وحبيبتي ❤️<br><br>
+حب عمري واحلى حاجه حصلتلي في حياتي بحمد ربنا انو بعتك ليا مش عارف من غيرك كان هيبقى اي شكل حياتي بحبك اوي ي حبيبه وبموت فيكي والله ومش متخيل حياتي من غيرك ❤️<br><br>
+ربنا يخليكي ليا يا أم روڤان 💍❤️
+</p>
+
+<img id="photo" src="images/1.jpg" style="width:90%;max-width:400px;border-radius:20px;box-shadow:0 0 20px #ff4d6d;">
+
+<script>
+let photo = 1;
+
+setInterval(function(){
+
+photo++;
+
+if(photo>71){
+photo=1;
+}
+
+document.getElementById("photo").src="images/"+photo+".jpg";
+
+},2500);
+</script>
+<script>
+function createHeart(){
+    let heart=document.createElement("div");
+    heart.innerHTML="❤️";
+    heart.style.position="fixed";
+    heart.style.left=Math.random()*100+"vw";
+    heart.style.top="-30px";
+    heart.style.fontSize=(20+Math.random()*20)+"px";
+    heart.style.zIndex="9999";
+    document.body.appendChild(heart);
+
+    let y=-30;
+
+    let move=setInterval(function(){
+        y+=3;
+        heart.style.top=y+"px";
+
+        if(y>window.innerHeight){
+            clearInterval(move);
+            heart.remove();
+        }
+    },20);
+}
+
+setInterval(createHeart,400);
+</script>
+<br><br>
+
+<button onclick="loveMessage()" style="
+background:#ff1744;
+color:white;
+border:none;
+padding:18px 35px;
+font-size:22px;
+border-radius:40px;
+box-shadow:0 0 20px pink;
+cursor:pointer;
+<br><br>
+
+<button onclick="loveMessage()" style="
+background:#ff1744;
+color:white;
+border:none;
+padding:18px 35px;
+font-size:22px;
+border-radius:40px;
+box-shadow:0 0 20px pink;
+cursor:pointer;
+font-weight:bold;
+">
+💌 اضغطي هنا يا بوبتي  💌
+<br><br>
+
+<button onclick="openProposal()" style="
+background:#ff69b4;
+color:white;
+border:none;
+padding:18px 35px;
+font-size:22px;
+border-radius:40px;
+cursor:pointer;
+box-shadow:0 0 20px pink;
+">
+💍 اضغطي هنا 💍
+</button>
+</button>
+
+<script>
+function loveMessage(){
+alert(`❤️ حبيبت بابا ❤️
+
+أنا يمكن مبعرفش أوصف قد إيه أنا بحبك...
+
+بس عايزك تتأكدي إني بحبك حب ميتوصفش يا حبيبة، إنتي دنيتي كلها. ❤️
+
+بحبك بطريقة يمكن أنا نفسي مش فاهمها...
+
+كل اللي أعرفه إنك بقيتي حتة مني، يومي بيبدأ بيكي وبينتهي بيكي، حتى لو نايمة بينتهي بيكي برضه، لازم أفكر فيكي قبل ما أنام... لأنك عمرِك ما بتروحي من بالي. 🥹❤️
+
+إنتي الأمان والحنية اللي كنت بدور عليهم من سنين...
+والراحة اللي بلاقيها دايمًا وسط أي تعب. 🤍
+
+نفسي نفضل سوا...
+وأثبتلك كل يوم قد إيه إنتي أغلى حد في حياتي. ❤️💍
+
+بحبك يا أم روفان... وهفضل أحبك العمر كله. ❤️🫂`);
+}
+</script>
+<script>
+setTimeout(function(){
+document.getElementById("welcome").style.display="none";
+},3000);
+</script>
+<div id="proposal" style="
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.9);
+z-index:999999;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+text-align:center;
+color:white;
+">
+
+<h1 style="font-size:40px;">💍❤️</h1>
+
+<h2> حبيبه </h2>
+
+<h1 style="color:#ff4d6d;">
+هتكملي العمر كله معايا؟ 🥹❤️
+</h1>
+
+<button onclick="yesLove()" style="
+margin-top:25px;
+padding:18px 40px;
+font-size:22px;
+background:#ff1744;
+color:white;
+border:none;
+border-radius:40px;
+cursor:pointer;
+">
+أكيد يا سيف ❤️
+</button>
+
+</div>
+
+<script>
+function openProposal(){
+document.getElementById("proposal").style.display="flex";
+}
+
+function yesLove(){
+
+document.getElementById("proposal").innerHTML=`
+<h1 style="font-size:55px;">❤️🥹❤️</h1>
+
+<h1 style="color:#ff4d6d;">
+❤️🥹
+
+كنت عارف إنك هتوافقي... ❤️
+
+وعد مني...
+إني أفضل سندك، وضهرك، وصاحبك، وحبيبك طول العمر.
+
+وهفضل كل يوم أحاول أخليكي أسعد واحدة في الدنيا.
+
+بحبك يا حبيبه...
+ومش شايف مستقبلي إلا وإنتي فيه. 💍🤍
+20 / 11 / 2024 ❤️ ♾️
+Seif 🤍 Habiba
+∞ Forever Starts Here ∞ 
+</h1>
+
+<h2>
+من سيف ❤️
+</h2>
+
+<h3>
+Forever Together 💍
+</h3>
+`;
+}
+</script>
+</body>
+<div id="welcome" style="
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:black;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:999999;
+color:white;
+">
+
+<h1 style="font-size:45px;color:#ff4d6d;">
+👑 Welcome My Princess 👑
+</h1>
+
+<h2 style="font-size:35px;">
+Habiba 🌚♥️
+</h2>
+
+<p style="font-size:20px;">
+❤️ اهلا بيكي في عالمنا الصغير خشي ب رجلك اليمين ❤️
+</p>
+<h2 style="color:#ff4d6d; margin-top:30px;">
+∞ To Be Continued... ❤️ ∞
+</h2>
+
+<p style="color:#ffd700; font-size:18px;">
+لأن دي مش نهاية الموقع...
+دي بداية عمر كامل مع بعض. 💍🤍
+</p>
+</div>
+</html>
+<hr style="margin-top:40px;border:1px solid #ff4d6d;">
+
+<h3 style="color:white;">
+Made with ❤️ by Seif
+</h3>
+
+<p style="color:#ffb6c1;">
+Only for Om Rovan ♾️
+</p>
+<p style="margin-top:30px;font-size:18px;color:#ffd700;">
+❤️ 20 / 11 / 2024 ❤️<br>
+بداية أجمل حكاية في حياتي.
+</p>
